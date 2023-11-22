@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPEAK NOW! Let Your Voice Echo Across Oceans!</title>
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const icon = document.querySelector('.menu');
+            const links = document.querySelector('.links');
+
+            icon.addEventListener('click', function(){
+                links.classList.toggle('responsive')
+            });
+
+            icon.addEventListener('click', function() {
+                links.classList.remove('responsive')
+            });
+             // Close the menu if a link is clicked
+            links.addEventListener('click', function () {
+                if (window.innerWidth <= 600) {
+                    links.classList.remove('responsive');
+                }
+            });
+            // Close the menu if the window is resized
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 600) {
+                    links.classList.remove('responsive');
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <video id="vidbg" autoplay muted loop playsinline>
+            <source src="./vbg1.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="content-body">
+        <nav class="navbar">
+            <div class="title">Dive into Action</div>
+            <div class="links">
+                <a class="" href="#home">Home</a>
+                <a class="" href="#intro">Artices</a>
+                <a class="" href="#discuss">Programs</a>
+                <a class="" href="#conclusion">Goals</a>
+                <a class="" href="#reference">Contact Us</a>
+            </div>
+            <div class="menu" id="menuIcon">&#9776;</div>
+        </nav>
+    
+        <section id="home" class="main">
+            <h1 id="home-text">Let Your Voice Echo Across Oceans</h1>
+            <h2 id="home-text">By: Belissa</h2>
+        </section>
+    
+        <section id="about" class="main content">
+        </section>
+        <footer>
+            <div class="icon-wrapper">
+            <div class="icon" id="fb"></div>
+            <div class="icon" id="soundcloud"></div>
+            <div class="icon" id="instagram"></div>
+            <div class="icon" id="youtube"></div>
+            </div>
+        </footer>
+    </div>
+
+</html>

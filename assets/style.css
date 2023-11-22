@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+
+
+#vidbg {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+code{
+    background-color: #000000;
+    display: inline-block;
+}
+
+:root{
+    --navbar-color: #001c4f;
+    --text-color: #ffffff;
+    --text-color-2: #dbdbdb;
+    --link-hover-bg: #493e73;
+    --link-hover: #464646;
+    --link-active: #464646;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Gabarito;
+}
+
+/*NAVIGATION*/
+nav{
+    position: fixed;
+    width: 100vw;
+    background-color: var(--navbar-color);
+}
+
+nav a{
+    color: var(--text-color);
+    text-align: center;
+    text-decoration: none;
+    padding: 1em;
+    font-size: 1.1em;
+    font-family: Gabarito;
+}
+nav .links{
+    padding: 1em 0;
+    float: right
+}
+.links ion-icon{
+    margin-right: 0.5em;
+}
+nav a:hover{
+    background-color: var(--link-hover-bg);
+    color: var(--link-hover);
+}
+nav a:active{
+    background-color: var(--link-active);
+    color: var(--text-color);
+}
+nav img{
+    float: left;
+    height: 2em;
+    margin: 0.7em 0 0 1em;
+}
+nav .title{
+    float: left;
+    color: var(--text-color);
+    font-size: 1.1em;
+    font-family: Gabarito;
+    margin: 0;
+    padding: 1em 1em;
+}
+
+/*FOOTER*/
+footer{
+    position: fixed;
+    bottom: 0%;
+    width: 100vw;
+    background-color: var(--navbar-color);
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+footer .left,
+footer .right{
+    color: var(--text-color);
+    text-decoration: none;
+    vertical-align: middle;
+    font-size: 1.1em;
+    padding: 1em;
+}
+footer .left{ float: left; }
+footer .right{ float: right; }
+footer .left ion-icon{ margin-left: 0.3em;}
+footer a:hover{
+    background-color: var(--link-hover-bg);
+    color: var(--link-hover);
+}
+footer a:active{
+    background-color: var(--link-active);
+    color: var(--text-color);
+}
+
+/*MAIN*/
+.main{
+    height: max-content;
+    min-height: 80vh;
+    margin: 0;
+    padding: 5em 0;
+}
+.content{
+    margin: 0 7%;
+}
+.content h1,
+.content p{
+    margin: 0;
+    padding: 0;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+.content h1{ font-size: 3em; color: var(--text-color); font-family: 'Young Serif', serif; }
+.content p{ font-size: 1.3em; color: var(--text-color-2); font-family: 'Labrada', serif; 
+text-indent: 50px; padding-top: 1em;}
+
+/*HOME*/
+#home-text{
+    text-shadow: -3px -3px 3px rgba(0, 0, 0, 0.5);
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#home h1,
+#home h2{
+    margin: 0;
+    padding: 0;
+    margin-left: 5%;
+}
+#home h1{ font-size: 5em; color: var(--text-color); }
+#home h2{ font-size: 2em; color: var(--text-color-2); }
+
+/*DISCUSSION*/
+.tables{
+    display: flex;
+    flex-direction: row;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    color: var(--text-color);
+    margin: 1em;
+}
+th,td{
+    border: 1px solid var(--text-color-2);
+    padding: 5px;
+}
+th{ background-color: var(--navbar-color); }
+.images{ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-gap: 1em;
+    padding-top: 1em;
+}
+.images img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.videos-online{ /*for uploaded videos*/
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.videos-online iframe,
+.videos-online object,
+.videos-online embed{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*REFERENCE*/
+#reference p{
+    padding-left: 7%;
+    text-indent: -50px;
+}
+
+/*ABOUT*/
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+#about img{ height:10em; border-radius: 15%; }
+#about h1,
+#about h2,
+#about h3,
+#about p{
+    margin: 0;
+    padding: 0;
+}
+#about h3{ font-size: 1.2em; color: var(--text-color); font-family: 'Young Serif', serif;}
+#about h2{ font-size: 1.5em; color: var(--text-color); font-family: 'Young Serif', serif;}
+#about p{ font-size: 1.1em; color: var(--text-color-2); font-family: 'Labrada', serif;
+    text-indent: 50px; padding-top: 1em; margin: 0 10%;}
+.social,
+.social li{font-size: 1.1em; color: var(--text-color-2); font-family: 'Labrada', serif;
+    list-style: none; padding: 0; margin: 0 0.5em; display: inline;}
+.personal { padding:1em; border-bottom: 1px solid var(--navbar-color);}
+.personal li{font-size: 1.1em; color: var(--text-color-2); font-family: 'Labrada', serif;
+    list-style: disc; padding: 0; margin: 0 0.5em;
+    max-width: 22em;}
+#about h3,
+#about h2{ margin-top: 1em; }
+#about a{ text-decoration: none; color: var(--text-color); }
+#about a:hover{ color: var(--link-active); }
+
+/*RESET*/
+body{
+    margin: 0;
+    padding: 0;
+    background-image: var(--background-color);
+}
+
+.icon{
+    background: url(img/sprite3.png);
+    background-repeat: no-repeat; width: 45px;
+    height: 40px;
+    display: inline-flex;
+    margin: 0.2em;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+
+.icon-wrapper{ float: left; }
+
+#fb{background-position: -450px -159px; }
+#soundcloud{background-position: -598px -86px; }
+#instagram{background-position: -301px -234px; }
+#youtube{background-position: -450px -234px; }
+
+.navbar .menu{
+    display: none;
+    padding: 1em;
+    color: var(--text-color)
+}
+
+
+@media screen and (max-width: 700px){
+    .navbar a {display: none;}
+    .navbar .menu{
+        float: right;
+        display: block;
+    }
+    .navbar.responsive {
+        position: relative;
+    }
+    .navbar.responsive .menu{
+        float: none;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    #home h1{
+
+        font-size: 3em;
+    }
+    #home h2{
+        font-size: 1em;
+        margin-bottom: 10em;
+    }
+    video{
+        display: none;
+    }
+    html{
+        background-image: url(./img/ibg2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .icon-wrapper{
+        float:none;
+        
+    }
+}
